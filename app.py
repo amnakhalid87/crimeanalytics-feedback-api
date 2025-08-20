@@ -49,7 +49,7 @@ def save_feedback():
         db.session.add(feedback)
         db.session.commit()
 
-        return jsonify({'message': 'Feedback saved', 'id': feedback.id}), 201
+        return jsonify({'message': 'Feedback saved'}), 201
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
